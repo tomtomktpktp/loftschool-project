@@ -1,0 +1,55 @@
+.values {
+  margin-bottom: 114px;
+
+}
+
+.values__wrapper {
+  position: relative;
+}
+.values__container {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background: url('~images/content/guitar.png') left bottom / contain no-repeat;
+    display: block;
+    bottom: 5%;
+    height: 130%;
+    width: 75%;
+    left: -20%;
+
+  }
+}
+
+.values__title {
+  margin-bottom: 82px;
+  display: flex;
+  justify-content: center;
+}
+
+.values__title-container {
+  width: 48%;
+  margin-left: 6%;
+}
+
+.values__title-text {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 55px;
+}
+
+.values__content {
+  color: rgba($text-color, .5);
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.values__widget {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.values__widget-container {
+  width: 66%;
+}
