@@ -2,31 +2,32 @@ extends ./main.layout.pug
 
 block content
   .first-section
-    section.hero
-        .container.hero__container
-            header.header
-                a.logo(href="#") ТЗ
-                nav.menu
-                    - var menuItems = ["Обо мне", "Навыки", "Работы", "Отзывы"];
-                    ul.menu__list
-                        each item in menuItems
-                            li.menu__item
-                                a(href="#").menu__link #{item}
-
-                - var socials = ["insta", "vk", "github", "envelope"];
-                ul.socials
-                  each item in socials
-                    li.socials__item
-                      a(href="#").socials_link 
-                        +icon(item, "socials__icon")
-            .hero__content
-              .userinfo
-                  .userinfo__title Личный сайт веб разработчика
-                  .userinfo__text Томирис  Зейнелкожа
-
-            .hero__bottom-buttons
-              .scroll-down 
-                a(href="").scroll-down__btn Скролл
+    section.fullscreen-section.hero
+      .container.hero__container
+        header.header
+          .header__logo
+            a.logo(href="#") ТЗ
+          .header__menu
+            nav.menu
+              ul.menu__list
+                - var menuItems = ["Обо мне", "Навыки", "Работы", "Отзывы"];
+                each item in menuItems
+                  li.menu__item
+                    a(href="#").menu__link #{item}
+          .header__links
+            ul.socials
+              - var socials = ["insta", "vk", "github", "envelope"];
+              each item in socials
+                li.socials__item
+                  a(href="#").socials_link 
+                    +icon(item, "socials__icon")
+        .hero__content
+          .userinfo
+            .userinfo__title Личный сайт #[span.userinfo__occ веб разработчика]
+            .userinfo__text Томирис Зейнелкожа
+        .hero__bottom-buttons
+          .scroll-down 
+            a(href="").scroll-down__btn Скролл
     section.about
       container.about__container
         .about__user
@@ -114,8 +115,8 @@ block content
                 p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
               a(href="").iconed-link Посмотреть сайт
   section.reviews
-    .container.contacts__container
-      .contacts__about
+    .container.reviews__container
+      .reviews__about
         .slider
           .slider__header
             .slider__title.section-title Что обо мне говорят
@@ -153,7 +154,7 @@ block content
           .footer__info-column
             .footer__info-text
               p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
-            .footer__info-socials 
+            .footer__info-socials
               ul.socials
                   each item in socials
                     li.socials__item

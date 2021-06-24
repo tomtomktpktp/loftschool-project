@@ -29,8 +29,9 @@ body {
 .container {
   margin: 0 auto;
   width: 1080px;
+  width: 95%;
 
-  @include phones {
+  @media (max-width: 480px) {
     width: 85%;
   }
 }
