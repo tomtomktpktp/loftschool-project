@@ -3,15 +3,33 @@
     padding: 90px 0;
     color: rgba(#fff, .5);
     line-height: 1.7;
+    @media (max-width: 768px) {
+    padding: 50px 0;
+  }
 }
 .footer__container{
     display:flex;
     justify-content: space-between;
+    @media (max-width: 480px) {
+    flex-direction: column;
+  }
 }
 .footer__copyright{
     display:flex;
     justify-content:space-between;
     width: 35%;
+    @media (max-width: 992px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 20%;
+    }
+    @media (max-width: 768px) {
+        width: 30%;
+    }
+    @media (max-width: 480px) {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
 .footer__copyright-year {
     font-weight: 600;
@@ -20,7 +38,10 @@
 }
 .footer__copyright-info{
     width: 41%;
-    padding-top: 10px;  
+    padding-top: 10px;
+    @media (max-width: 992px) {
+        width: 100%;
+  }  
 }
 .footer__copyright-name{
     text-transform: uppercase;
@@ -28,29 +49,69 @@
     font-size: 18px;
     margin-bottom: 18px;
     color: #fff;
+    @media (max-width: 480px) {
+        margin-bottom: 7px;
+  }
 }
-.footer__copyright-text{
+.footer__info-text{
     margin-bottom: 25px;
+    @media (max-width: 480px) {
+    margin-bottom: 18px;
+  }
 }
 .footer__info{
     width: 60%;
     padding-top:10px;
+    @media (max-width: 992px) {
+    width: 75%;
+    }
+    @media (max-width: 768px) {
+        width: 60%;
+    }
+    @media (max-width: 480px) {
+        width: 100%;
+    }
 }
 .footer__info-menu{
     margin-bottom: 70px;
+    @media (max-width: 768px) {
+        margin-bottom: 30px;
+    }
     .menu__list {
         justify-content: flex-start;
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+        }
     }
     .menu__item{
         margin-right: 6%;
+        @media (max-width: 768px) {
+            margin-bottom: 32px;
+        }
     }
 }
 .footer__info-body{
     display:flex;
     justify-content: space-between;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: space-between;
+  }
 }
 .footer__info-column{
     width: 45%;
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 60px;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 45px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 .footer__info-text{
     margin-bottom:50px;

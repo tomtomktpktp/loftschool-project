@@ -1,6 +1,8 @@
 .values {
   margin-bottom: 114px;
-
+    @media(max-width: 480px) {
+    margin-bottom: 75px;
+  }
 }
 
 .values__wrapper {
@@ -8,7 +10,9 @@
 }
 .values__container {
   position: relative;
-
+  @media (max-width: 768px) {
+    padding-bottom: 350px;
+  }
   &:before {
     content: "";
     position: absolute;
@@ -18,7 +22,9 @@
     height: 130%;
     width: 75%;
     left: -20%;
-
+    @media (max-width: 768px) {
+      background: none;
+    }
   }
 }
 
@@ -31,6 +37,19 @@
 .values__title-container {
   width: 48%;
   margin-left: 6%;
+    @media (max-width:992px) {
+    width: 42%;
+    margin-left: 0;
+  }
+  @media (max-width:768px) {
+    width: 68%;
+    text-align: center;
+  }
+  @media (max-width:480px) {
+    width: 100%;
+    margin-left: 0;
+    text-align: left;
+  }
 }
 
 .values__title-text {
@@ -48,8 +67,14 @@
 .values__widget {
   display: flex;
   justify-content: flex-end;
+    @media (max-width:768px) {
+    justify-content: center;
+  }
 }
 
 .values__widget-container {
   width: 66%;
+    @media (max-width:768px) {
+    width: 95%;
+  }
 }
