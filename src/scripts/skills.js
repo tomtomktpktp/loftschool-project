@@ -35,7 +35,7 @@ new Vue({
 	data(){
 		return{
 			skills : []
-		}
+		};
 	},
 	created(){
 		this.skills = require("../data/skills.json");

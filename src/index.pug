@@ -75,25 +75,7 @@ block content
       .container.works__container
         .section-title.works__section-title Мои работы
         .works__content
-          .works-preview
-            .works-preview__pictures(data-slide="1")
-              .works-preview__pictures-content
-                +image("content/slider-1.jpg","works-preview__img")
-                ul.works-preview__thumbs
-                  - for (var i = 3; i > 0; i--)
-                    li.works-preview__thumb-item(class=`${i === 1 ? 'active' : ''}`)
-                      a(href="").works-preview__thumb-link
-                        +image(`content/slider-${i}.jpg`, "works-preview__thumb")
-            .works-preview-info
-              ul.works-preview__tags
-                - var tags =["HTML", "CSS","Javascript"];
-                each item in tags
-                  li.works-preview__tag-item
-                    .tag #{item}
-              .works-preview__title Сайт школы образования
-              .works-preview__content
-                p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-              a(href="").iconed-link Посмотреть сайт
+          #preview-component
   section.reviews
     .container.reviews__container
       .reviews__about
