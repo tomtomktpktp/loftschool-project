@@ -23,6 +23,7 @@ const display = {
 };
 
 const tags = {
+	props :["tags"],
 	template: "#preview-tag"
 };
 
@@ -30,6 +31,11 @@ const info = {
 	props:["currentWork"],
 	template: "#preview-info",
 	components: { tags },
+	computed:{
+		tagsArray(){
+			return this.currentWork.skills.split(",");
+		}
+	}
 };
 
 new Vue({

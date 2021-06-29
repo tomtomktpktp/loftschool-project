@@ -43,7 +43,9 @@ script(type="text/x-template")#preview-btns
 
 script(type="text/x-template")#preview-info
 	.works-preview-info
-		tags
+		tags(
+			:tags="tagsArray"
+		)
 		.works-preview__title {{currentWork.title}}
 		.works-preview__content
 			p {{currentWork.desc}}
@@ -51,7 +53,5 @@ script(type="text/x-template")#preview-info
 
 script(type="text/x-template")#preview-tag
 	ul.works-preview__tags
-		- var tags =["HTML", "CSS","Javascript"];
-		each item in tags
-			li.works-preview__tag-item
-				.tag #{item}
+		li.works-preview__tag-item(:v-for tag in tags)
+			.tag {{tag}}
