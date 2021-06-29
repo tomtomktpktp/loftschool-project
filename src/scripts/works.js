@@ -11,7 +11,7 @@ const btns = {
 };
 
 const display = {
-	props:["currentWork", "works"],
+	props:["currentWork", "works", "currentIndex"],
 	template: "#preview-display",
 	components: { thumb,btns },
 	computed:{

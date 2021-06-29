@@ -2,6 +2,7 @@ script(type="text/x-template")#preview-container
 	.works-preview
 		display(
 			:currentWork="currentWork"
+			:currentIndex="currentIndex"
 			:works="works"
 			@slide="slide"
 		)
@@ -10,7 +11,7 @@ script(type="text/x-template")#preview-container
 		)
 	
 script(type="text/x-template")#preview-display
-	.works-preview__pictures(data-slide="1")
+	.works-preview__pictures(:data-slide="currentIndex+1")
 		.works-preview__pictures-content
 			img(:src="currentWork.photo").works-preview__img
 			thumb(
