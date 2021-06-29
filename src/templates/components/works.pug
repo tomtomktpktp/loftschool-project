@@ -15,7 +15,7 @@ script(type="text/x-template")#preview-display
 		.works-preview__pictures-content
 			img(:src="currentWork.photo").works-preview__img
 			thumb(
-				:works="works"	
+				:works="limitedWorks"	
 				:currentWork="currentWork"
 			)
 			btns(

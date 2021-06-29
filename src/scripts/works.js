@@ -15,9 +15,9 @@ const display = {
 	template: "#preview-display",
 	components: { thumb,btns },
 	computed:{
-		reversedWorks(){
+		limitedWorks(){
 			const works=[...this.works];
-			return this.works.reverse();
+			return this.works.slice(0,3);
 		}
 	}
 };
@@ -50,7 +50,7 @@ new Vue({
 	},
 	computed: {
 		currentWork(){
-			return this.works[this.currentIndex];
+			return this.works[0];
 		}
 	},
 	watch:{
@@ -73,11 +73,16 @@ new Vue({
 		
 	},
 	slide(direction){
+		const lastItem=this.works[this.workslength-1];
 		switch(direction){
 			case "next":
+				this.works.push(this.works[0]);
+				this.works.shift();
 				this.currentIndex++;
 				break;
 			case "prev":
+				this.works.unshift();
+				this.works.pop();
 				this.currentIndex--;
 				break;
 		}
